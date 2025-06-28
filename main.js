@@ -18,7 +18,7 @@ device.open(async function (err) {
   const filePath = join("./chiikawa.jpg");
   const image = await Image.load(filePath);
 
-  printer.font("a").align("ct").style("bu").size(1, 1);
+  // printer.font("a").align("ct").style("bu").size(1, 1);
   // .barcode(112233445566, "EAN13", { width: 50, height: 50 })
   // .table(["One", "Two", "Three"])
   // .tableCustom(
@@ -35,7 +35,7 @@ device.open(async function (err) {
   // inject image to printer
   printer = await printer.image(
     image,
-    "d8" // changing with image
+    "d24" // changing with image
   );
 
   printer.cut().close();
