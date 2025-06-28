@@ -15,7 +15,7 @@ device.open(async function (err) {
   let printer = new Printer(device, options);
 
   // Path to png image
-  const filePath = join("./pikachu.png");
+  const filePath = join("./chiikawa.jpg");
   const image = await Image.load(filePath);
 
   printer.font("a").align("ct").style("bu").size(1, 1);
